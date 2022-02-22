@@ -87,8 +87,6 @@ DATABASES = {
     }
 }
 
-AUTH_USER_MODEL = "Support.User"
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -154,3 +152,5 @@ CELERY_RESULT_BACKEND = os.environ.get('CELERY_BROKER', 'redis://localhost:6379'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
+
+AUTH_USER_MODEL = 'Support.CustomUser'
